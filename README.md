@@ -55,3 +55,13 @@ mvn spring-boot:run
           ]
       }
   ]
+
+- **Status 404 NOT_FOUND:**
+
+  ```json
+      [
+         {
+          "status": 404,
+          "message": "User not found"
+        }
+      ]  
