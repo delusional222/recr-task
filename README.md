@@ -25,10 +25,7 @@ The project uses Maven for dependency management and build configuration. The ma
 
 To build the project, run the following command:
 
-```sh
 mvn clean install
-
-```sh
 mvn spring-boot:run
 
 ## API Endpoints
