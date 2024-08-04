@@ -1,74 +1,60 @@
-Zadanie Rektruacyjne
+# Zadanie Rekruacyjne
 
 This project is a Spring Boot application developed as a recruitment task. It provides an API to list GitHub repositories for a given user, excluding forked repositories, and returns detailed information about each repository's branches and their latest commits. Additionally, it handles cases where the provided GitHub username does not exist.
-Project Structure
 
-The project uses Maven for dependency management and builds configuration. The main dependencies are Spring Boot, Lombok, and Project Reactor for reactive programming.
+## Project Structure
 
-Dependencies
+The project uses Maven for dependency management and build configuration. The main dependencies are Spring Boot, Lombok, and Project Reactor for reactive programming.
 
-    Spring Boot Starter Web
-    Spring Boot Starter WebFlux
-    Lombok 
-    Spring Boot Starter Test 
-    Reactor Test 
+## Dependencies
 
-Build and Run
-Prerequisites
+- **Spring Boot Starter Web**
+- **Spring Boot Starter WebFlux**
+- **Lombok**
+- **Spring Boot Starter Test**
+- **Reactor Test**
 
-    Java 21
-    Maven
+## Build and Run
 
-Build
+### Prerequisites
+
+- **Java 21**
+- **Maven**
+
+### Build
 
 To build the project, run the following command:
 
-sh
-
+```sh
 mvn clean install
 
-Run
-
-To run the application, use the following command:
-
-sh
-
+```sh
 mvn spring-boot:run
 
-API Endpoints
-List GitHub Repositories
+## API Endpoints
 
-Request:
+### List GitHub Repositories
 
-    Method: GET
-    Endpoint: /api/github/{username}/repositories
-    Headers: Accept: application/json
+**Request:**
 
-Response:
+- **Method:** GET
+- **Endpoint:** `/api/github/{username}/repositories`
+- **Headers:** `Accept: application/json`
 
-    Status 200 OK:
+**Response:**
 
-    json
+- **Status 200 OK:**
 
-[
-    {
-        "repositoryName": "repo-name",
-        "ownerLogin": "owner-login",
-        "branches": [
-            {
-                "name": "branch-name",
-                "lastCommitSha": "commit-sha"
-            }
-        ]
-    }
-]
-
-Status 404 Not Found:
-
-json
-
-    {
-        "status": 404,
-        "message": "User not found"
-    }
-
+  ```json
+  [
+      {
+          "repositoryName": "repo-name",
+          "ownerLogin": "owner-login",
+          "branches": [
+              {
+                  "name": "branch-name",
+                  "lastCommitSha": "commit-sha"
+              }
+          ]
+      }
+  ]
